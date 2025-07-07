@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Myint Store - Premium Myanmar Traditional Products Online. Authentic handcrafted items, jewelry, and traditional crafts.">
+    <meta name="keywords" content="Myanmar products, traditional crafts, jewelry, handmade, Myanmar store, online shopping">
+    <meta name="author" content="Myint Store">
+    <meta property="og:title" content="Myint Store - Premium Myanmar Traditional Products">
+    <meta property="og:description" content="Discover authentic Myanmar traditional products and handcrafted items at Myint Store">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myintstore.github.io">
+    
+    <title>Myint Store - Premium Myanmar Traditional Products</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="styles/responsive.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/placeholder-logo.svg">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading Myint Store...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/placeholder-logo.svg" alt="Myint Store Logo" class="logo">
+                <span class="logo-text">Myint Store</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="search-toggle" id="search-toggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container" id="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+                <button class="search-btn" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Welcome to Myint Store</h1>
+                <p class="hero-subtitle">Authentic Myanmar Traditional Products</p>
+                <p class="hero-description">Discover our curated collection of handcrafted jewelry, traditional crafts, and premium Myanmar products</p>
+                <button class="cta-button" onclick="scrollToProducts()">
+                    <span>Shop Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="https://pixabay.com/get/g21e3754bd0c211d3253aaf9151b2cc3eb6a7cf28be79aa68f2dc458043ca8924ca04060b15f324b54db26df9fef176df900adb51d61084ad4d6c7ba2cae46956_1280.jpg" alt="Myanmar Traditional Products" class="hero-img">
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Handcrafted with traditional techniques</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and secure shipping nationwide</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Authentic</h3>
+                    <p>100% genuine Myanmar products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Latest Products</h2>
+                <p class="section-subtitle">Discover our curated collection of authentic Myanmar treasures</p>
+            </div>
+            
+            <!-- Product Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+                <button class="filter-btn" data-filter="crafts">Crafts</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="jewelry">
+                    <div class="product-image">
+                        <img src="https://pixabay.com/get/gcdb3f1745bfebebec4a59c34f32508672d4d0a38c9b4b726f0b3e9ee950a452521ee5f83f71c59803b3f8bf6d39ee3048b54dfc2c2e22b879d2f90be58500fe2_1280.jpg" alt="Traditional Myanmar Jewelry" class="product-img" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="openLightbox('https://pixabay.com/get/gcdb3f1745bfebebec4a59c34f32508672d4d0a38c9b4b726f0b3e9ee950a452521ee5f83f71c59803b3f8bf6d39ee3048b54dfc2c2e22b879d2f90be58500fe2_1280.jpg', 'Traditional Myanmar Jewelry')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Traditional Myanmar Jewelry</h3>
+                        <p class="product-price">20,000 MMK</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="crafts">
+                    <div class="product-image">
+                        <img src="https://pixabay.com/get/g59448cc24630a6093f0cb157cf17515ccea50688e28251e7c96b11a161380ec8a8c1646ac9d05270b2a1ae14d2c6f50cf725d42b4b129b2876c04899044378be_1280.jpg" alt="Handcrafted Myanmar Art" class="product-img" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="openLightbox('https://pixabay.com/get/g59448cc24630a6093f0cb157cf17515ccea50688e28251e7c96b11a161380ec8a8c1646ac9d05270b2a1ae14d2c6f50cf725d42b4b129b2876c04899044378be_1280.jpg', 'Handcrafted Myanmar Art')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Handcrafted Myanmar Art</h3>
+                        <p class="product-price">20,000 MMK</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="traditional">
+                    <div class="product-image">
+                        <img src="https://pixabay.com/get/g4acd2491ab4df180edc87e1f3a3a83cdcb60844505a6f796cc8a719b9cfc4d6fa344790b1ca2af0a27c914b7399d99f8e927d1c25eccd22909e6b9c93a580bad_1280.jpg" alt="Traditional Myanmar Crafts" class="product-img" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="openLightbox('https://pixabay.com/get/g4acd2491ab4df180edc87e1f3a3a83cdcb60844505a6f796cc8a719b9cfc4d6fa344790b1ca2af0a27c914b7399d99f8e927d1c25eccd22909e6b9c93a580bad_1280.jpg', 'Traditional Myanmar Crafts')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Traditional Myanmar Crafts</h3>
+                        <p class="product-price">20,000 MMK</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="jewelry">
+                    <div class="product-image">
+                        <img src="https://pixabay.com/get/g21e3754bd0c211d3253aaf9151b2cc3eb6a7cf28be79aa68f2dc458043ca8924ca04060b15f324b54db26df9fef176df900adb51d61084ad4d6c7ba2cae46956_1280.jpg" alt="Premium Myanmar Jewelry" class="product-img" loading="lazy">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn" onclick="openLightbox('https://pixabay.com/get/g21e3754bd0c211d3253aaf9151b2cc3eb6a7cf28be79aa68f2dc458043ca8924ca04060b15f324b54db26df9fef176df900adb51d61084ad4d6c7ba2cae46956_1280.jpg', 'Premium Myanmar Jewelry')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Myanmar Jewelry</h3>
+                        <p class="product-price">20,000 MMK</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Myint Store</h2>
+                    <p class="about-description">
+                        Myint Store has been proudly serving customers with authentic Myanmar traditional products for years. 
+                        We specialize in handcrafted jewelry, traditional crafts, and premium Myanmar items that showcase 
+                        the rich cultural heritage of our beautiful country.
+                    </p>
+                    <p class="about-description">
+                        Our commitment to quality and authenticity ensures that every product tells a story of Myanmar's 
+                        artistic traditions and craftsmanship. We work directly with local artisans to bring you the finest 
+                        selection of traditional Myanmar products.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Products</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://pixabay.com/get/g9a4f6500fbe09995cc59f06fc0ed40ee69bb1ec8094891ae85279e530da65a073cf80a1b6cdfa4e9c02797b4dab7c4b9545e2205828056656343cd026fe717aa_1280.jpg" alt="Myanmar Traditional Store" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch with us for any inquiries or custom orders</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Facebook</h3>
+                            <a href="https://www.facebook.com/share/1EUmVUdZ3z/?mibextid=wwXIfr" target="_blank" class="contact-link">
+                                Myint Store
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telegram</h3>
+                            <a href="https://t.me/Muyaung" target="_blank" class="contact-link">
+                                @Muyaung
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>KBZPay</h3>
+                            <a href="tel:09695271946" class="contact-link">
+                                09695271946
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form" class="form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                            <span class="form-error" id="phone-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/placeholder-logo.svg" alt="Myint Store Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">Myint Store</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted source for authentic Myanmar traditional products and handcrafted treasures.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#products">Jewelry</a></li>
+                        <li><a href="#products">Crafts</a></li>
+                        <li><a href="#products">Traditional Items</a></li>
+                        <li><a href="#products">Handmade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1EUmVUdZ3z/?mibextid=wwXIfr" target="_blank" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://t.me/Muyaung" target="_blank" class="social-link">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="tel:09695271946" class="social-link">
+                            <i class="fas fa-mobile-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Myint Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" src="" alt="" class="lightbox-image">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+</html>
