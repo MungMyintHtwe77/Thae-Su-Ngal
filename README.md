@@ -1,1 +1,0 @@
-# Thae-Su-Ngal
